@@ -1,0 +1,57 @@
+.wrap{
+	background: rgb(240, 240, 255);
+	width: auto;
+	margin: auto;
+	font-family: Arial;
+}
+ 
+/*bagian header*/
+.wrap .header{
+	background: rgb(255, 174, 0);
+	font-family: verdana;
+	/*height: 50px;*/
+	padding: 2px 10px;
+}
+ 
+/*akhir header*/
+ 
+/*bDAK ADAagian menu*/
+.wrap .menu{
+	background: rgb(255, 230, 0);
+}
+ 
+.wrap .menu ul{
+	padding: 0;
+	margin: 0;
+	background: rgb(54, 54, 54);
+	overflow: hidden;
+}
+ 
+.wrap .menu ul li{
+	float: left;
+	list-style-type: none;
+	padding: 10px;
+}
+/*akhir menu*/
+ 
+.clear{
+	clear: both;
+}
+ 
+.badan{
+	height: 700px;
+}
+/*bagian sidebar*/
+.wrap .badan .sidebar{
+	background: orange;
+	float: left;	
+	width: 25%;
+	height: 100%;
+}
+ 
+ 
+.wrap .footer{
+	width: auto;
+	padding: 40px;
+	background:  rgb(32, 32, 32);
+}
