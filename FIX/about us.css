@@ -1,0 +1,83 @@
+.font {
+  font-family: Microsoft Tai Le;
+}
+
+*{
+  margin:0px auto; /*supaya layer otomatis mengisi dan ke tengah*/
+  }
+   
+.wrapper{
+  width:100%;
+  }
+
+.header{
+  width: 100%;
+  height: 80px;
+  background: rgb(250, 245, 245);
+  box-shadow: 1px 5px 12px 2px rgba(119, 78, 24, 0.651);
+  z-index:1000; 
+  position:fixed;
+}
+
+.stylemenu{
+  text-decoration: none; /*Untuk menghlilangkan garis bawah pada text link*/
+  margin-left: 10px;
+  margin-right: 30px;
+  color: rgba(160, 72, 17, 0.829);
+}
+
+.jarak{
+  height: 5cm;
+}
+
+.judul{
+    text-align: center;
+    letter-spacing: 6px;
+}
+
+.box3{
+    margin-top: 2cm;
+    margin-left: 2cm;
+    background: rgba(55, 90, 129, 0.541);
+    width: 11cm;
+    height: 9cm;
+}
+
+.foto1{
+    margin-left: 1cm;
+    margin-top: 0.8cm;
+    width: 430px;
+
+}
+
+.box4{
+    margin-top: -9.2cm;
+    margin-left: 16cm;
+    background: rgba(145, 111, 67, 0.459);
+    width: 18cm;
+    height: 9.5cm;
+}
+
+.text1{
+    margin-left: 1cm;
+    margin-right: 1cm;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.jualanku{
+    letter-spacing: 4px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer{
+    width: 100%;
+    height: 150px;
+    background: rgba(92, 52, 7, 0.726);
+    z-index:1000; 
+}
+
+.stylefooter{
+    margin-left: 2cm;
+}
