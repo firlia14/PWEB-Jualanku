@@ -1,188 +1,286 @@
-.font {
-    font-family: Microsoft Tai Le;
-}
+* {
+    margin: 0;
+    padding: 0;
+  }
 
-*{
-    margin:0px auto; /*supaya layer otomatis mengisi dan ke tengah*/
-    }
-
-.header{
-    width: 100%;
-    height: 80px;
-    background: rgb(250, 245, 245);
-    box-shadow: 1px 5px 12px 2px rgba(119, 78, 24, 0.651);
-    z-index: 1000;
-    position:fixed;
-}
-
-.stylemenu{
-    text-decoration: none; /*Untuk menghlilangkan garis bawah pada text link*/
-    margin-left: 10px;
-    margin-right: 30px;
-    color: rgba(160, 72, 17, 0.829);
-}
-
-.jarak{
-    height: 5cm;
-}
-
-.judul{
-    text-align: center;
-    letter-spacing: 4px;
-}
-
-.box3{
-    position: relative;
-    width:auto;
-    height:500px;
-    top: 180px;
-    background:rgba(228, 197, 174, 0.329)
-}
-
-.box4{
-    position: absolute;
-    width:10cm;
-    height:7cm;
-    left: 2cm;
-    top: 2cm;
-    background:rgba(218, 172, 22, 0.445);
-}
-
-.imgtoko2{
-    margin-top: -0.1cm;
-    margin-left: 1cm;
-
-}
-
-.boxdetailtoko{
-    font-size: 18px;
-    width: 20cm;
-    height: 6.5cm;
-    margin-left: 13cm;
-    margin-right: 3cm;
-    margin-top: 0.5cm;
-    position: absolute;
-    background: rgba(197, 160, 115, 0.479);
-}
-
-.detailtext{
-    text-align: left;
-    margin-left: 1cm;
-    margin-right: 1cm;
-    letter-spacing: 1px;
-    font-size: 15px;
-}
-
-.deskripsi{
-    margin-top: 320px;
-    margin-left: 5cm;
-    margin-right: 5cm;
-    text-align: center;
-    border-radius: 30px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-    background-color: rgba(209, 204, 177, 0.486);
-}
-
-.textdesk{
-    text-align: center;
+.container{
+    display: grid;
+    height: 200vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 4fr 6fr 6fr 6fr 3fr ;
+    grid-template-areas:
+    "nav nav nav nav"
+    "main main main main"
+    "sidebar content content content"
+    "sidebar content1 content2 content3"
+    "sidebar content4 content5 content6"
+    "bottom bottom bottom bottom"
+    "footer footer footer footer" ;
+    /*grid-gap: 0.2rem;*/
+    font-family: -webkit-pictograph;
+    /*font-weight: 800;*/
     font-size: 16px;
     letter-spacing: 1px;
+    /*text-align: center;*/
+}
+  
+/* NAVBAR */
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    background: rgb(250, 245, 245);
+    z-index: 1;
+    box-shadow: 1px 5px 12px 2px rgba(119, 78, 24, 0.651);
+    /* padding: 5px 0; */
+    height: 50px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 80px;
 }
 
-.box5{
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+nav ul li a {
+    color: rgba(160, 72, 17, 0.829);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+nav ul li a:hover {
+    color: rgba(238, 181, 145, 0.829);
+}
+
+/* menu responsive tablet */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
     position: relative;
-    width:auto;
-    height:1070px;
-    top: 60px;
-    background:rgba(128, 96, 71, 0.329)
+    z-index: 999;
 }
 
-.box6{
-    position: relative;
-    width:30cm;
-    height:200px;
-    top: 100px;
-    left: 2.8cm;
-    background:rgba(133, 83, 19, 0.37) ;
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
 }
 
-
-.desainproduk{
-    margin-left: 0cm;
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgba(160, 72, 17, 0.829);
+    border-radius: 3px;
+    transition: all 0.5s;
 }
 
-.produk {
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: rgb(170, 68, 0);
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:last-child {
+    background-color: rgb(170, 68, 0);
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+
+    transform: scale(0);
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1fr 1fr;
+        grid-template-areas: 
+        "nav"
+        "main"
+        "sidebar"
+        "content"
+        "content1"
+        "content2"
+        "content3"
+        "content4"
+        "content5"
+        "content6"
+        "bottom"
+        "footer";
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(250, 245, 245);
+        z-index: 1;
+        transform: translateY(-100%);
+        transition: all 1s;
+
+    }
+
+    nav ul.slide {
+        transform: translateY(0);
+    }
+
+}
+
+main{
+    margin: 40px;
+    grid-area: main;
+    text-align: center;
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+#content {
+    grid-area: content;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    background:#ddf0eb;
+}
+
+#sidebar{
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: #ede8c2;
+    grid-area: sidebar;
+    
+}
+.img1{
+    margin-top: 25px;
+    border-radius: 15px;
+}
+#texttoko{
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 14px;
+}
+
+#content1{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    grid-area: content1;
+}
+
+.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 250px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 2cm;
-    height: 380px;
-    border-radius: 10px;
+    max-width: 300px;
+    margin: auto;
     text-align: center;
-    background: rgb(252, 250, 244);
+    background-color: white;
+    border-radius: 20px;
+  }
+
+.imgproduk{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-.foto{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 170px;
+#content2{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    grid-area: content2;
 }
 
-.foto4{
-    height: 170px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+#content3{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    grid-area: content3;
+
 }
 
-.foto5{
-    height: 170px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+#content4{
+    grid-area: content4;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.box7{
-    height: 2cm;
-    margin-top: 1.6cm;
-    background: rgba(216, 171, 88, 0.589);
+#content5{
+    grid-area: content5;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#content6{
+    grid-area: content6;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#bottom{
+    padding: 90px;
+    grid-area: bottom;
     text-align: center;
-    letter-spacing: 2px;
 }
 
-.jualanku{
-    letter-spacing: 4px;
+#text-bottom{
+    font-weight: 700;
     font-size: 20px;
-    text-align: center;
 }
 
-.footer{
+footer{
+    height: 30vh;
+    grid-area: footer;
     font-size: 15px;
-    font-family: Microsoft Tai Le;
     width: 100%;
     height: 210px;
-    background: rgba(92, 52, 7, 0.726);
-    z-index:1000; 
-  }
-  
-  .stylefooter{
+    background: rgb(179, 94, 48);
+}
+
+.stylefooter {
     margin-left: 2cm;
-  }
-  
-  .foto2{
+}
+
+.foto-email {
+    margin-top: 18px;
+}
+
+.text-footer1 {
+    margin-top: 0px;
+
+}
+
+.text-footer2 {
     margin-top: 20px;
-    margin-left: -20px;
-  }
-  
-  .bawah1{
-    margin-top: -1px;
-   
-  }
-  
-  .bawah2{
-    margin-top: 20px;
-  }
-
-
-
-  
+}
