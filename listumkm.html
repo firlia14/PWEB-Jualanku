@@ -1,45 +1,41 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- deklarasi tipe file dan tata cara penulisan-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!--nerjemahkan karakter html sbg utf8-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List UMKM</title>
-    <link rel="stylesheet" href="list umkm.css">
+    <title>COBA</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="list umkm.css"> <!--menghubungkan dg file css-->
 </head>
-
-<div class="font">
-  <div>
-      <div class="header">
-      <header>
-              <img src="img/logo.jpg" alt="Gambar tidak ditemukan" style="width:8%; height: 80px; " align="left">
-              <div class="menu" align="right" margin-top="5" >
-                  <br>
-                  <br>
-                  <a class="stylemenu"href="index.html">HOME</a>
-                  <a class="stylemenu"href="listumkm.html">LIST UMKM</a>
-                  <a class="stylemenu" href="login.html"><strong>LOG IN</strong></a>
-                  <a class="stylemenu" href="signup.html"><strong>SIGN UP</strong></a>
-                  <a class="stylemenu"href="about us.html">ABOUT US</a>
-                  </div>
-      </header>
-      </div>
-  </div>
-
-<p class="jarak"></p>
-
 <body>
-  <div class="judul">
-    <h2>TOKO UMKM</h2>
-    <br>
-    <hr width="1000px">
-</div>
- 
-<table>
-  <tbody>
-  <tr>
-    <td>
+  <div class="container">
+    <nav>
+        <div class="logo">
+            <img src="img/logo.jpg" alt="logo" style="width:10%; height: 50px; " align="left">
+        </div>
+        
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="listumkm.html">LIST UMKM</a></li>
+            <li><a href="about us.html">ABOUT US</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <input type="checkbox" /> 
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <h3 style="color: #8f7560;">&nbsp;&nbsp;&nbsp;TOKO UMKM</h3>
+    </main>
+
+    <div id='content1'>
       <div class="card">
-        <img src="img/pia-tape.jpg" alt="Gambar tidak ditemukan" style="width:100%">
+        <img src="img/pia-tape.jpg" alt="Tape" style="width:100%; height: 220px;">
         <h1>Manda's Cookies</h1>
         <br>
         <p>Alamat : Jl. Mastrip, Tamansari</p>
@@ -48,10 +44,10 @@
         <br>
         <p><button>Kunjungi toko</button></p>
       </div>
-     </td>
-     <td>
+    </div>
+    <div id='content2'>
       <div class="card">
-        <img src="img/kerajinan-kuningan-bondowoso0002.jpg" alt="Gambar tidak ditemukan" style="width:100%">
+        <img src="img/kerajinan-kuningan-bondowoso0002.jpg" alt="kuningan" style="width:100%; height: 220px;">
         <h1>Bu. Sus Kuningan</h1>
         <br>
         <p>Alamat : Desa Wonosari, Bondowoso</p>
@@ -60,10 +56,10 @@
         <br>
         <p><button><a class="kunjungi" href="detail toko kuningan.html">Kunjungi toko</a></button></p>
       </div>
-     </td>
-     <td>
+    </div>
+    <div id='content3'>
       <div class="card">
-        <img src="img/Membatik-salah-satu-kegiatan-UMKM-yang-dapat-mendongkrak-perekonomian-masyarakatasd-444x330.jpg" alt="Gambar tidak ditemukan" style="width:100%">
+        <img src="img/Membatik-salah-satu-kegiatan-UMKM-yang-dapat-mendongkrak-perekonomian-masyarakatasd-444x330.jpg" alt="batik" style="width:100%; height: 220px;">
         <h1>Batik SUmbersari</h1>
         <br>
         <p>Alamat : Desa Sumbersari, Maesan</p>
@@ -72,12 +68,10 @@
         <br>
         <p><button><a class="kunjungi" href="detail toko batik.html">Kunjungi toko</a></button></p>
       </div>
-     </td>
-    </tr>
-    <tr>
-    <td>
+    </div>
+    <div id='content4'>
       <div class="card">
-        <img src="img/IMG_2421.jpg" alt="Gambar tidak ditemukan" style="width:100%">
+        <img src="img/IMG_2421.jpg" alt="Gambar tidak ditemukan" style="width:100%; height: 220px;">
         <h1>Tape 77</h1>
         <br>
         <p>Alamat : Jl. Diponegoro, Curahdami </p>
@@ -86,10 +80,10 @@
         <br>
         <p><button>Kunjungi toko</button></p>
       </div>
-     </td>
-     <td>
+    </div>
+    <div id='content5'>
       <div class="card">
-        <img src="img/mamasakin_28_9_2018_11_58_47_42.jpg" alt="Gambar tidak ditemukan" style="width:100%">
+        <img src="img/mamasakin_28_9_2018_11_58_47_42.jpg" alt="Gambar tidak ditemukan" style="width:100%; height: 220px;">
         <h1>Sambal Haha</h1>
         <br>
         <p >Alamat : Jl. Santawi No.15</p>
@@ -98,10 +92,10 @@
         <br>
         <p><button><a class="kunjungi" href="detailtokosambal.html">Kunjungi toko</a></button></p>
       </div>
-     </td>
-     <td>
+    </div>
+    <div id='content6'>
       <div class="card">
-        <img src="img/izin-usaha-toko-tanaman-hias.jpg" alt="Gambar tidak ditemukan" style="width:100%">
+        <img src="img/izin-usaha-toko-tanaman-hias.jpg" alt="Gambar tidak ditemukan" style="width:100%; height: 220px;">
         <h1>Gina Florist</h1>
         <br>
         <p>Alamat : Jl. Imam Bonjol No.50</p>
@@ -110,73 +104,69 @@
         <br>
         <p><button>Kunjungi toko</button></p>
       </div>
-     </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="card">
-          <img src="img/maxresdefault.jpg" alt="Gambar tidak ditemukan" style="width:100%">
-          <h1>Batik Tulis Bu.Eka</h1>
-          <br>
-          <p>Alamat : Jl. Kamboja, Maesan </p>
-          <p>CP : 081563896247</p>
-          <br>
-          <br>
-          <p><button>Kunjungi toko</button></p>
-        </div>
-       </td>
-       <td>
-        <div class="card">
-          <img src="img/villa-santri-tawangmangu.jpg" alt="Gambar tidak ditemukan" style="width:100%">
-          <h1>Arabica Coffe</h1>
-          <br>
-          <p >Alamat : Jl. Pelita, Tamansari</p>
-          <p>CP: 089526346124</p>
-          <br>
-          <br>
-          <p><button>Kunjungi toko</button></p>
-        </div>
-       </td>
-       <td>
-        <div class="card">
-          <img src="img/dsc_0250.jpg" alt="Gambar tidak ditemukan" style="width:100%">
-          <h1>Blind Accessories</h1>
-          <br>
-          <p>Alamat : Blindungan, Bondowoso</p>
-          <p>CP : 085438972367</p>
-          <br>
-          <br>
-          <p><button>Kunjungi toko</button></p>
-        </div>
-       </td>
-      </tr>
-    
-    </tbody>
-    
- </table>
-<div class="lihat"><p><button class="button-lihat">Lihat Lebih Banyak...</button></p></div>
-</body>
+    </div>
+    <div id='content7'>
+      <div class="card">
+        <img src="img/maxresdefault.jpg" alt="Gambar tidak ditemukan" style="width:100%; height: 220px;">
+        <h1>Batik Tulis Bu.Eka</h1>
+        <br>
+        <p>Alamat : Jl. Kamboja, Maesan </p>
+        <p>CP : 081563896247</p>
+        <br>
+        <br>
+        <p><button>Kunjungi toko</button></p>
+      </div>
+    </div>
+    <div id='content8'>
+      <div class="card">
+        <img src="img/home 12.jpeg" alt="Gambar tidak ditemukan" style="width:100%; height: 220px;">
+        <h1>Arabica Coffe</h1>
+        <br>
+        <p >Alamat : Jl. Pelita, Tamansari</p>
+        <p>CP: 089526346124</p>
+        <br>
+        <br>
+        <p><button>Kunjungi toko</button></p>
+      </div>
+    </div>
+    <div id='content9'>
+      <div class="card">
+        <img src="img/dsc_0250.jpg" alt="Gambar tidak ditemukan" style="width:100%; height: 220px;">
+        <h1>Blind Accessories</h1>
+        <br>
+        <p>Alamat : Blindungan, Bondowoso</p>
+        <p>CP : 085438972367</p>
+        <br>
+        <br>
+        <p><button>Kunjungi toko</button></p>
+      </div>
+    </div>
+    <div id="bottom">
+      <hr style="color= #8f7560;"><br>
+      <h1 style="color:#8f7560;">JUALANKU</h1><br>
+      <hr style="color= #8f7560;">
+    </div>
 
-<p class="jarak1"></p>
+    <footer>
+      <div class="stylefooter">
+          <br>
+          <h3><strong>KONTAK KAMI</strong></h3>
+          <br>
+              <p>Jl. Mawar, Bondowoso, Jawa Timur</p>
+              <p>Kode Pos 23457</p>
+              <br>
+              <img class="foto-telp" src="img/telpon.png" style="width: 20px; height:20px" align="left">
+              <p class="text-footer1">&#160;&#160;&#160;087462976470</p>
+              <img class="foto-email" src="img/email.png" style="width: 22px; height:22px" align="left">
+              <p class="text-footer2">&#160;&#160;Jualanku@gmail.com&#160;&#160;&#160;&#160;&#160;</p>
+              <center>
+                  © Copyright Jualanku 2020
+                  
+              </center>
+      </div>
+    </footer>
 
-<footer class="footer">
-  <div class="stylefooter">
-  <br>
-  <h3><strong>KONTAK KAMI</strong></h3>
-  <br>
-      <p>Jl. Mawar, Bondowoso, Jawa Timur</p>
-      <p>Kode Pos 23457</p>
-      <br>
-      <img class="foto1" src="img/telpon.png" style="width: 20px; height:20px" align="left">
-      <p class="bawah1">&#160;&#160;&#160;087462976470</p>
-      <img class="foto2" src="img/email.png" style="width: 22px; height:22px" align="left">
-      <p class="bawah2">&#160;&#160;Jualanku@gmail.com&#160;&#160;&#160;&#160;&#160;</p>
-      <center>
-          © Copyright Jualanku 2020
-          
-      </center>
   </div>
-</footer>
-
-
+<script src="script.js"></script>
+</body>
 </html>
